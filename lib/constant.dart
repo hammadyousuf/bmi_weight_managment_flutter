@@ -16,4 +16,9 @@ const kNumberTextStyle =TextStyle(
   fontWeight: FontWeight.w900,
 );
 
+const kLargeButtonTextStyle = TextStyle(
+  fontSize:  25.0,
+  fontWeight: FontWeight.bold
+);
+
 
