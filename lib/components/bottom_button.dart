@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import '../constant.dart';
+import 'package:bmi_weight_managment_flutter/constant.dart';
 
+class BottomButton extends StatelessWidget {
+  BottomButton({@required this.onTap, @required this.buttonTitle});
 
-
-class ButtonBottom extends StatelessWidget {
-  ButtonBottom({@required this.onTap, @required this.buttonTitle});
   final Function onTap;
   final String buttonTitle;
 
@@ -28,3 +27,4 @@ class ButtonBottom extends StatelessWidget {
     );
   }
 }
+

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:bmi_weight_managment_flutter/constant.dart';
 
-class IconsContent extends StatelessWidget {
-  IconsContent({this.icon, this.label});
+class IconContent extends StatelessWidget {
+  IconContent({this.icon, this.label});
 
   final IconData icon;
   final String label;
@@ -21,7 +21,7 @@ class IconsContent extends StatelessWidget {
         ),
         Text(
           label,
-          style:kLabelTextStyle,
+          style: kLabelTextStyle,
         )
       ],
     );

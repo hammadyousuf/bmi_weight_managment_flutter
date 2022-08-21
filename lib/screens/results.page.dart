@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-import '../constant.dart';
-import '../components/reusable_card.dart';
+
+
 import '../components/bottom_button.dart';
+import '../components/reusable_card.dart';
+import '../constant.dart';
 
 class ResultsPage extends StatelessWidget {
+  ResultsPage(
+      {@required this.interpretation,
+        @required this.bmiResult,
+        @required this.resultText});
 
-  ResultsPage ({@required this.bmiResult , @required this.resultText , @required this.interpretation});
-  final String bmiResult ;
+  final String bmiResult;
   final String resultText;
   final String interpretation;
 
@@ -28,40 +33,39 @@ class ResultsPage extends StatelessWidget {
                 'Your Result',
                 style: kTitleTextStyle,
               ),
-
             ),
           ),
           Expanded(
             flex: 5,
             child: ReusableCard(
               colour: kActiveCardColour,
-              cardChild: Column
-                (
+              cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                 resultText.toUpperCase(),
-                        style: kResultTextStyle,
+                    resultText.toUpperCase(),
+                    style: kResultTextStyle,
                   ),
                   Text(
-                 bmiResult.toUpperCase(),
+                    bmiResult,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    interpretation.toUpperCase(),
+                    interpretation,
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),
                 ],
-                
               ),
             ),
           ),
-          ButtonBottom(buttonTitle: 'RECALCULATE',
-          onTap: (){
-            Navigator.pop(context);
-          },)
+          BottomButton(
+            buttonTitle: 'RE-CALCULATE',
+            onTap: () {
+              Navigator.pop(context);
+            },
+          )
         ],
       ),
     );
